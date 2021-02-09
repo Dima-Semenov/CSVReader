@@ -1,6 +1,7 @@
 import React from 'react';
 import { CurrentUser } from '../CurrentUser/CurrentUser';
 import '../UserList/userList.scss';
+import PropTypes from 'prop-types';
 
 export const UserList = ({ users }) => {
   return (
@@ -32,4 +33,8 @@ export const UserList = ({ users }) => {
       </table>
     </>
   );
+};
+
+UserList.propTypes = {
+  users: PropTypes.array.isRequired,
 };

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../CurrentUser/currentUser.scss';
+import PropTypes from 'prop-types';
 
 export const CurrentUser = ({
   id,
@@ -132,3 +133,21 @@ export const CurrentUser = ({
     </tr>
   );
 };
+
+CurrentUser.propTypes = {
+  id: PropTypes.number.isRequired,
+  full_name: PropTypes.string.isRequired,
+  phone: PropTypes.number.isRequired,
+  email: PropTypes.string.isRequired,
+};
+
+CurrentUser.defaultProps = {
+  age: null,
+  experience: '',
+  yearly_income: '',
+  has_children: false,
+  license_states: '',
+  expiration_date: null,
+  license_number: '',
+  dublicate: null,
+}
